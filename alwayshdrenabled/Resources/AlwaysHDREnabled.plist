@@ -9,6 +9,8 @@
 			<string>PSGroupCell</string>
 			<key>label</key>
 			<string>Settings</string>
+			<key>footerText</key>
+			<string>Camera app must be closed for changes to take effect.</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -17,6 +19,8 @@
 			<true/>
 			<key>defaults</key>
 			<string>com.milodarling.alwayshdrenabled~prefs</string>
+			<key>PostNotification</key>
+			<string>com.milodarling.alwayshdrenabled~prefs/prefschanged</string>
 			<key>key</key>
 			<string>enabled</string>
 			<key>label</key>

@@ -26,3 +26,20 @@ BOOL enabled = [[prefs objectForKey:@"enabled"] boolValue];
 	}
 }
 %end
+
+void loadPreferences() {
+    NSLog(@"AlwaysHDREnabled--Settings updated");
+}
+
+%ctor {
+    // Initialization stuff
+    
+    CFNotificationCenterAddObserver(CFNotificationCenterGetDarwinNotifyCenter(),
+                                    NULL,
+                                    (CFNotificationCallback)loadPreferences,
+                                    CFSTR("com.milodarling.alwayshdrenabled~prefs/prefschanged"),
+                                    NULL,
+                                    CFNotificationSuspensionBehaviorDeliverImmediately);
+    
+    loadPreferences();
+}

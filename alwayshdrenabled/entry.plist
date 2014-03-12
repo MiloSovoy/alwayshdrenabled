@@ -1,0 +1,10 @@
+{
+    entry = {
+	bundle = AlwaysHDREnabled;
+	cell = PSLinkCell;
+	detail = AlwaysHDREnabledListController;
+	icon = AlwaysHDREnabled.png;
+	isController = 1;
+	label = AlwaysHDREnabled;
+    };
+}

@@ -9,7 +9,7 @@ You are more than welcome to recommend me to add things, change things, or to im
 *Fork by Phillip Tennen/Codyd51*
 ================================
 
-In this fork:
+*In this fork:*
 
  - Added preference bundle, on/off switch
  - Changes take effect without a respring

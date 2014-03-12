@@ -10,7 +10,7 @@
 			<key>label</key>
 			<string>Settings</string>
 			<key>footerText</key>
-			<string>Changes take effect without a respring</string>
+			<string>Camera app must be closed for changes to take effect.</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -25,6 +25,20 @@
 			<string>enabled</string>
 			<key>label</key>
 			<string>Enabled</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>footerText</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>footerAlignment</key>
+			<integer>1</integer>
+			<key>footerText</key>
+			<string>Tweak by MiloDarling, fork by Phillip Tennen/Codyd51</string>
 		</dict>
 	</array>
 	<key>title</key>

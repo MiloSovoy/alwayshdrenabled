@@ -7,3 +7,10 @@ This is my first tweak, please be gentle.
 You are more than welcome to recommend me to add things, change things, or to improve my code. I just whipped this up, and anyone who can polish it is more than welcome to do so!
 
 *Fork by Phillip Tennen/Codyd51*
+================================
+
+In this fork:
+
+ - Added preference bundle, on/off switch
+ - Changes take effect without a respring
+ - Camera.app must be restarted for changes to take effect

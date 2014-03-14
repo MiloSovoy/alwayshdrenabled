@@ -4,6 +4,18 @@ BOOL enabled = [[prefs objectForKey:@"enabled"] boolValue];
 
 %hook PLCameraController
 
+-(BOOL) supportsHDR {
+
+	if (noNormalShot == FALSE)
+		return %orig;
+	}
+	
+	else {
+		return FALSE;
+	}
+	
+	
+
 -(BOOL) isHDREnabled {
 
 	if (enabled == FALSE) {

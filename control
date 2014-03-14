@@ -1,7 +1,7 @@
 Package: com.milodarling.alwayshdrenabled
 Name: AlwaysHDREnabled
 Depends: mobilesubstrate
-Version: 0.0.1
+Version: 0.0.2-2
 Architecture: iphoneos-arm
 Description: HDR is always on when using the Camera!
 Maintainer: Milo Darling

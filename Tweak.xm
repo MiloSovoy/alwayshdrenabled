@@ -1,17 +1,18 @@
 NSString *settingsPath = @"/var/mobile/Library/Preferences/com.milodarling.alwayshdrenabled~prefs.plist";
 NSMutableDictionary *prefs = [[NSMutableDictionary alloc] initWithContentsOfFile:settingsPath];
 BOOL enabled = [[prefs objectForKey:@"enabled"] boolValue];
+BOOL noNormalShot = [[prefs objectForKey:@"noNormalShot"] boolValue];
 
 %hook PLCameraController
 
 -(BOOL) supportsHDR {
 
-	if (noNormalShot == FALSE)
-		return %orig;
+	if (noNormalShot == TRUE)
+		return FALSE;
 	}
 	
 	else {
-		return FALSE;
+		return %orig;
 	}
 	
 	

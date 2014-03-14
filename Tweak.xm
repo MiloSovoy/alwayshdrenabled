@@ -1,30 +1,93 @@
 NSString *settingsPath = @"/var/mobile/Library/Preferences/com.milodarling.alwayshdrenabled~prefs.plist";
 NSMutableDictionary *prefs = [[NSMutableDictionary alloc] initWithContentsOfFile:settingsPath];
 BOOL enabled = [[prefs objectForKey:@"enabled"] boolValue];
+BOOL noNormalShot = [[prefs objectForKey:@"noNormalShot"] boolValue];
 
 %hook PLCameraController
 
+-(BOOL) supportsHDR {
+
+	if (noNormalShot == FALSE) {
+		return %orig;
+	}
+
+	return FALSE;
+
+}
+
 -(BOOL) isHDREnabled {
 
-	if (enabled == TRUE) {
-		return TRUE;
+	if (enabled == FALSE) {
+		return %orig;
 	}
 
 	else {
-		return %orig;
+		return TRUE;
 	}
 
 }
 -(BOOL) hasFlash {
 
-	if (enabled == TRUE) {
-		return FALSE;
+	if (enabled == FALSE) {
+		return %orig;
 	}
 
 	else {
-		return %orig;
+		return FALSE;
 	}
 }
+%end
+
+%hook CAMHDRButton
+
+-(BOOL) isOn {
+	if (enabled == FALSE) {
+		return %orig;
+	}
+
+	else {
+		return TRUE;
+	}
+
+}
+
+-(void) setOn:(BOOL)arg1 {
+
+	if (enabled == FALSE) {
+		%orig(arg1);
+	}
+
+	else {
+		arg1 = TRUE;
+		%orig(arg1);
+	}
+
+}
+
+-(BOOL) hdrIsOn {
+
+	if (enabled == FALSE) {
+		return %orig;
+	}
+
+	else {
+		return TRUE;
+	}
+
+}
+
+-(id) _onLabel {
+
+	if (enabled == FALSE) {
+		return %orig;
+	}
+
+	else {
+		return @"Always HDR";
+	}
+
+}	
+
 %end
 
 void loadPreferences() {

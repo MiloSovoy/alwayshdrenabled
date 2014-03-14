@@ -29,8 +29,24 @@
 		<dict>
 			<key>cell</key>
 			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>No Normal Shot</string>
 			<key>footerText</key>
-			<string></string>
+			<string>Enable this setting to remove the 'normal' shot that is taken along with the HDR one. Will stay enabled even if tweak is disabled.</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<true/>
+			<key>defaults</key>
+			<string>com.milodarling.alwayshdrenabled~prefs</string>
+			<key>PostNotification</key>
+			<string>com.milodarling.alwayshdrenabled~prefs/prefschanged</string>
+			<key>key</key>
+			<string>noNormalShot</string>
+			<key>label</key>
+			<string>No Normal Shot</string>
 		</dict>
 		<dict>
 			<key>cell</key>

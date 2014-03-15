@@ -7,8 +7,19 @@ BOOL noNormalShot = [[prefs objectForKey:@"noNormalShot"] boolValue];
 
 -(BOOL) supportsHDR {
 
-	if (noNormalShot == TRUE)
-		return FALSE;
+	if (noNormalShot == TRUE) {
+	
+		if (enabled == FALSE) {
+		
+			return %orig;
+			
+		}
+		
+		else {
+		
+			return FALSE;
+		
+		}
 	}
 	
 	else {
@@ -16,7 +27,7 @@ BOOL noNormalShot = [[prefs objectForKey:@"noNormalShot"] boolValue];
 	}
 	
 	
-
+}
 -(BOOL) isHDREnabled {
 
 	if (enabled == FALSE) {

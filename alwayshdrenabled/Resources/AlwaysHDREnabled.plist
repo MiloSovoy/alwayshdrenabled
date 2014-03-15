@@ -32,7 +32,7 @@
                         <key>label</key>
                         <string>No Normal Shot</string>
 			<key>footerText</key>
-			<string>Enable this setting to remove the 'normal' shot that is taken along with the HDR one. Will stay enabled even if tweak is disabled.</string>
+			<string>Enable this setting to remove the 'normal' shot that is taken along with the HDR one. To get this to work, you may need to enable/disable it and kill the Camera app a couple times.</string>
 		</dict>
 		<dict>
 			<key>cell</key>
